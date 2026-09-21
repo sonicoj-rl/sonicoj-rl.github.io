@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九十九 打一字 - 谜语大全与趣味汉字解析</title>
+    <meta name="description" content="探索谜底为“白”字的谜题解析。本页提供九十九打一字的谜语答案、解谜思路及趣味汉字文化知识，帮助您轻松解开谜题。">
+    <meta name="keywords" content="九十九打一字, 谜语答案, 汉字谜题, 趣味汉字, 脑筋急转弯">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5f7fa;
+            --text-color: #333;
+            --text-light: #666;
+            --accent-color: #ff6b6b;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1000px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: #fff;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Card Styles */
+        .card {
+            background: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid #eee;
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        /* Puzzle Section */
+        .puzzle-display {
+            text-align: center;
+            padding: 40px 0;
+            background: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .puzzle-riddle {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            letter-spacing: 5px;
+        }
+
+        .puzzle-hint {
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .answer-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+        }
+
+        .answer-btn:hover {
+            background-color: #357abd;
+            transform: translateY(-2px);
+        }
+
+        .answer-btn:active {
+            transform: translateY(0);
+        }
+
+        .answer-box {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: var(--border-radius);
+            border-left: 5px solid var(--primary-color);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .answer-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .explanation {
+            margin-top: 15px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Sidebar List */
+        .list-group {
+            list-style: none;
+        }
+
+        .list-group li {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .list-group li:last-child {
+            border-bottom: none;
+        }
+
+        .list-group a {
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .list-group a:hover {
+            color: var(--primary-color);
+        }
+
+        .list-group span {
+            font-size: 0.8rem;
+            color: #999;
+            background: #f5f5f5;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                谜语百科
+            </a>
+            <div class="nav-links">
+                <a href="#">首页</a>
+                <a href="#">字谜</a>
+                <a href="#">成语</a>
+                <a href="#">猜图</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>九十九 打一字</h1>
+        <p>经典的汉字谜题，考察对数字与汉字结构的逻辑联想能力。</p>
+    </section>
+
+    <!-- Main Content Area -->
+    <div class="main-layout">
+        
+        <!-- Left Column: Solution & Explanation -->
+        <section class="content-area">
+            
+            <!-- Puzzle Card -->
+            <article class="card">
+                <h2>谜题展示</h2>
+                <div class="puzzle-display">
+                    <div class="puzzle-riddle">九十九</div>
+                    <div class="puzzle-hint">提示：利用数字减法逻辑</div>
+                    <button class="answer-btn" id="showAnswerBtn">查看谜底</button>
+                    
+                    <div class="answer-box" id="answerBox">
+                        <div class="answer-text">白</div>
+                        <div class="explanation">
+                            <strong>解谜思路：</strong> 100 减去 1 等于 99。在汉字中，“白”字由“丿”（一）和“日”组成。将“白”字上部的“丿”理解为“1”，下部的“日”理解为“100”，组合起来就是“白”字。或者从字形上看，“白”字去掉上面的一笔（即“100减1”），就变成了“日”。
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Detailed Explanation Section -->
+            <article class="card">
+                <h2>深度解析</h2>
+                <p>“九十九打一字”是一个非常经典的字谜，其核心在于对汉字结构的拆解与重组，以及数字逻辑的巧妙运用。</p>
+                <br>
+                <h3>逻辑一：数字减法</h3>
+                <p>在中文谜语中，数字往往具有双关含义。这个谜题最直接的逻辑是<strong>100减1等于99</strong>。我们需要在汉字中找到一个部件代表“100”，另一个代表“1”，或者找到一个能通过减法得到“日”的字。</p>
+                <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-light);">
+                    <li>汉字“白”由“丿”（一笔）和“日”（百字底）组成。</li>
+                    <li>将“白”字看作“1”和“100”的结合。</li>
+                    <li>因此，“白”字本身即暗示了“100”与“1”的关系，或者可以理解为“100减去1”留下的部分。</li>
+                </ul>
+                <br>
+                <h3>逻辑二：字形会意</h3>
+                <p>另一种常见的解法思路是字形上的对比。在传统的字谜逻辑中，<strong>“百”字</strong>由“一”和“白”组成。如果题目是“一百减一”，谜底自然是“白”。虽然题目是“九十九”，但“九十九”在时间概念上常指“百岁将至”或接近圆满，谜底依然指向“白”字，或者通过“百”字减去“一”字（丿）来推导出“白”。</p>
+            </article>
+
+            <!-- Related Riddles -->
+            <article class="card">
+                <h2>同类型谜题推荐</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+                    <div class="puzzle-display" style="padding: 15px; box-shadow: none; border: 1px solid #eee; border-radius: 8px;">
+                        <div class="puzzle-riddle" style="font-size: 1.2rem;">一口吃掉牛尾巴</div>
+                        <div class="puzzle-hint" style="font-size: 0.8rem;">谜底：告</div>
+                    </div>
+                    <div class="puzzle-display" style="padding: 15px; box-shadow: none; border: 1px solid #eee; border-radius: 8px;">
+                        <div class="puzzle-riddle" style="font-size: 1.2rem;">左边绿，右边红</div>
+                        <div class="puzzle-hint" style="font-size: 0.8rem;">谜底：秋</div>
+                    </div>
+                    <div class="puzzle-display" style="padding: 15px; box-shadow: none; border: 1px solid #eee; border-radius: 8px;">
+                        <div class="puzzle-riddle" style="font-size: 1.2rem;">四面都是山，山山皆相连</div>
+                        <div class="puzzle-hint" style="font-size: 0.8rem;">谜底：田</div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+            <div class="card">
+                <h2>热门谜题</h2>
+                <ul class="list-group">
+                    <li><a href="#">一字十三点 - 难</a> <span>字谜</span></li>
+                    <li><a href="#">加一笔不好 - 易</a> <span>字谜</span></li>
+                    <li><a href="#">画时圆，写时方 - 易</a> <span>字谜</span></li>
+                    <li><a href="#">皇帝新衣 - 易</a> <span>成语</span></li>
+                    <li><a href="#">一半甜，一半苦 - 中</a> <span>字谜</span></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>猜字技巧</h2>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 10px;">
+                    猜字谜时，可以尝试从字形结构、读音、笔画数以及字义联想等多个角度入手。对于数字类谜题，更要留意“百、千、万”与汉字结构的对应关系。
+                </p>
+            </div>
+        </aside>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 谜语百科网 - 专注汉字文化的趣味探索</p>
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">免责声明</a>
+            <a href="#">联系合作</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Simple interaction for the puzzle answer
+    document.addEventListener('DOMContentLoaded', function() {
+        const showBtn = document.getElementById('showAnswerBtn');
+        const answerBox = document.getElementById('answerBox');
+        let isRevealed = false;
+
+        showBtn.addEventListener('click', function() {
+            if (!isRevealed) {
+                answerBox.style.display = 'block';
+                showBtn.textContent = '隐藏谜底';
+                showBtn.style.backgroundColor = '#ff6b6b';
+                isRevealed = true;
+            } else {
+                answerBox.style.display = 'none';
+                showBtn.textContent = '查看谜底';
+                showBtn.style.backgroundColor = '#4a90e2';
+                isRevealed = false;
+            }
+        });
+    });
+</script>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
