@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>planetside2 - 永恒战线：全服战报、职业解析与战术指南</title>
+    <meta name="description" content="planetside2 官方与社区资源中心。提供全服战报、战甲与载具深度评测、阵营战术指南及最新补丁更新资讯。">
+    <meta name="keywords" content="planetside2, 永恒战线, PS2, SOE, FPS, 战甲, 载具, 战报, 阵营">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2b32b2;
+            --secondary-color: #1488cc;
+            --accent-color: #00d2ff;
+            --warning-color: #f5af19;
+            --danger-color: #e84118;
+            --success-color: #4cd137;
+            --bg-dark: #0f1014;
+            --bg-card: #1a1c23;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 16, 20, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--text-main);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .btn-login {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .btn-login:hover {
+            opacity: 0.9;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://picsum.photos/seed/planetside2/1920/1080.jpg') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn Up 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        .stat-item span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Content Grid */
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .section-link {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Faction Cards */
+        .faction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .faction-card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .faction-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .faction-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .nc-icon { background: linear-gradient(135deg, #e84118, #c23616); }
+        .vs-icon { background: linear-gradient(135deg, #8c7ae6, #5f27cd); }
+        .tr-icon { background: linear-gradient(135deg, #f5f6fa, #2f3640); color: #e74c3c; }
+
+        .faction-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .faction-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .class-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .class-tag {
+            font-size: 0.8rem;
+            padding: 5px 12px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Featured News */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .news-card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #333;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-tag {
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .news-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        /* Loadout & Guides */
+        .guides-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .guide-item {
+            display: flex;
+            background-color: var(--bg-card);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            align-items: center;
+            border: 1px solid #333;
+        }
+
+        .guide-icon {
+            font-size: 2rem;
+            margin-right: 20px;
+            width: 50px;
+            text-align: center;
+        }
+
+        .guide-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .guide-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .sidebar-widget {
+            background-color: var(--bg-card);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            border: 1px solid #333;
+            margin-top: 20px;
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .server-status {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .status-green { background-color: var(--success-color); box-shadow: 0 0 10px var(--success-color); }
+        .status-red { background-color: var(--danger-color); box-shadow: 0 0 10px var(--danger-color); }
+
+        .server-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .server-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            padding: 8px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b0c0e;
+            padding: 50px 0 20px;
+            border-top: 1px solid #333;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-wrapper { flex-direction: column; gap: 15px; }
+            nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
+            .guides-layout { grid-template-columns: 1fr; }
+            .hero-stats { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">PLANETSIDE<span>2</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#factions">三大阵营</a></li>
+                    <li><a href="#news">战报资讯</a></li>
+                    <li><a href="#guides">战术指南</a></li>
+                    <li><a href="#community">社区论坛</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-login">登录 / 注册</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>永恒战线</h1>
+                <p>在三大阵营之间争夺地球的未来。体验数千名玩家同屏的史诗级大规模作战，驾驶载具，使用战甲，为了领土与荣耀而战。</p>
+                <div style="margin-bottom: 25px;">
+                    <a href="#" style="background: var(--accent-color); color: #000; padding: 12px 30px; border-radius: 4px; font-weight: bold; display: inline-block;">立即下载游戏</a>
+                    <a href="#" style="margin-left: 15px; border: 1px solid #fff; color: #fff; padding: 12px 30px; border-radius: 4px; font-weight: bold; display: inline-block;">观看宣传片</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>120,000+</h3>
+                        <span>当前在线人数</span>
+                    </div>
+                    <div class="stat-item">
+                        <h3>4</h3>
+                        <span>主要地图区域</span>
+                    </div>
+                    <div class="stat-item">
+                        <h3>3</h3>
+                        <span>对立阵营</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section container" id="factions">
+            <div class="section-header">
+                <h2 class="section-title">选择你的阵营</h2>
+                <a href="#" class="section-link">查看阵营详细对比 &rarr;</a>
+            </div>
+            <div class="faction-grid">
+                <!-- NC -->
+                <article class="faction-card">
+                    <div class="card-header">
+                        <div class="faction-icon nc-icon">N</div>
+                        <div class="faction-name">奈特西斯</div>
+                    </div>
+                    <p class="faction-desc">崇尚自由与个人主义的武装反抗军。他们装备了高火力的重型武器，代表着人类最原始的战斗本能。</p>
+                    <div class="class-list">
+                        <span class="class-tag">先锋</span>
+                        <span class="class-tag">机枪手</span>
+                        <span class="class-tag">医疗兵</span>
+                        <span class="class-tag">侦察兵</span>
+                        <span class="class-tag">重装</span>
+                    </div>
+                </article>
+
+                <!-- TR -->
+                <article class="faction-card">
+                    <div class="card-header">
+                        <div class="faction-icon tr-icon">T</div>
+                        <div class="faction-name">泰瑞坦</div>
+                    </div>
+                    <p class="faction-desc">追求效率、秩序与公平的工业帝国。TR拥有最均衡的兵种配置和最强的装甲防御能力。</p>
+                    <div class="class-list">
+                        <span class="class-tag">突击兵</span>
+                        <span class="class-tag">机枪手</span>
+                        <span class="class-tag">医疗兵</span>
+                        <span class="class-tag">侦察兵</span>
+                        <span class="class-tag">重装</span>
+                    </div>
+                </article>
+
+                <!-- VS -->
+                <article class="faction-card">
+                    <div class="card-header">
+                        <div class="faction-icon vs-icon">V</div>
+                        <div class="faction-name">瓦努</div>
+                    </div>
+                    <p class="faction-desc">崇尚科技、生命进化的神秘组织。VS拥有能量武器和先进的机甲技术，机动性极强。</p>
+                    <div class="class-list">
+                        <span class="class-tag">先锋</span>
+                        <span class="class-tag">机枪手</span>
+                        <span class="class-tag">医疗兵</span>
+                        <span class="class-tag">侦察兵</span>
+                        <span class="class-tag">重装</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section container" id="news">
+            <div class="section-header">
+                <h2 class="section-title">最新战报与资讯</h2>
+                <a href="#" class="section-link">查看全部新闻 &rarr;</a>
+            </div>
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/ps2battle/600/400" alt="前线战场" class="news-image">
+                    <div class="news-content">
+                        <span class="news-tag">战报</span>
+                        <h3 class="news-title">安诺拉基地争夺战：三阵营激战72小时</h3>
+                        <p class="news-excerpt">本周最大的冲突发生在安诺拉，数千名玩家参与了一场持续了三天三夜的拉锯战，最终由瓦努阵营夺下控制权。</p>
+                        <a href="#" style="color: var(--secondary-color); font-size: 0.9rem;">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/ps2update/600/400" alt="游戏更新" class="news-image">
+                    <div class="news-content">
+                        <span class="news-tag">更新日志</span>
+                        <h3 class="news-title">4.0版本补丁：新载具与平衡性调整</h3>
+                        <p class="news-excerpt">开发者宣布了即将到来的4.0版本更新内容，包括新型空中载具的引入以及步枪弹道的修正。</p>
+                        <a href="#" style="color: var(--secondary-color); font-size: 0.9rem;">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/ps2event/600/400" alt="社区活动" class="news-image">
+                    <div class="news-content">
+                        <span class="news-tag">活动</span>
+                        <h3 class="news-title">万圣节特别活动：幽灵战甲限时体验</h3>
+                        <p class="news-excerpt">为了庆祝万圣节，所有阵营将开放幽灵战甲的试用权限，该战甲拥有隐身和穿透护盾的能力。</p>
+                        <a href="#" style="color: var(--secondary-color); font-size: 0.9rem;">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section container" id="guides">
+            <div class="section-header">
+                <h2 class="section-title">战术指南与工具</h2>
+                <a href="#" class="section-link">进入工具箱 &rarr;</a>
+            </div>
+            <div class="guides-layout">
+                <div class="main-guides">
+                    <div class="guide-list">
+                        <article class="guide-item">
+                            <div class="guide-icon">🚁</div>
+                            <div class="guide-info">
+                                <h4>空中优势：载具驾驶指南</h4>
+                                <p>掌握旋翼机与喷气式战斗机的机动技巧，如何在对抗狗斗中存活并打击地面目标。</p>
+                            </div>
+                        </article>
+                        <article class="guide-item">
+                            <div class="guide-icon">🛡️</div>
+                            <div class="guide-info">
+                                <h4>防御工事：建造系统详解</h4>
+                                <p>如何高效利用建造锤部署炮台、沙袋和墙角掩体，构建坚固的防御阵地。</p>
+                            </div>
+                        </article>
+                        <article class="guide-item">
+                            <div class="guide-icon">🤖</div>
+                            <div class="guide-info">
+                                <h4>资源管理：补给与维护</h4>
+                                <p>理解资源采集机制，合理分配物资给重装单位，确保前线战斗力的持续输出。</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">服务器状态</h3>
+                        <div class="server-status">
+                            <span>北美服务器 (US-E)</span>
+                            <span class="status-dot status-green"></span>
+                        </div>
+                        <div class="server-status">
+                            <span>欧洲服务器 (EU-W)</span>
+                            <span class="status-dot status-green"></span>
+                        </div>
+                        <div class="server-status">
+                            <span>亚洲服务器 (AS-O)</span>
+                            <span class="status-dot status-green"></span>
+                        </div>
+                        <div class="server-list">
+                            <div class="server-row">
+                                <span>Miller (NC)</span>
+                                <span style="color:var(--danger-color)">High</span>
+                            </div>
+                            <div class="server-row">
+                                <span>Cobalt (VS)</span>
+                                <span style="color:var(--warning-color)">Med</span>
+                            </div>
+                            <div class="server-row">
+                                <span>Waterson (TR)</span>
+                                <span style="color:var(--success-color)">Low</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">热门推荐</h3>
+                        <ul style="font-size: 0.9rem; color: var(--text-muted);">
+                            <li style="margin-bottom: 10px;"><a href="#">战甲技能树加点推荐</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#">新手入门生存手册</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#">载具改装配件一览</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#">PVP vs PVE 哪个好玩</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 15px;">PLANETSIDE<span>2</span></div>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">
+                        永恒战线是自由开放的MMOFPS网游，致力于为玩家提供最真实的战场体验。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">官方网站</a></li>
+                        <li><a href="#">官方论坛</a></li>
+                        <li><a href="#">下载中心</a></li>
+                        <li><a href="#">玩家手册</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏指南</h4>
+                    <ul>
+                        <li><a href="#">战甲图鉴</a></li>
+                        <li><a href="#">载具百科</a></li>
+                        <li><a href="#">地图攻略</a></li>
+                        <li><a href="#">组队招募</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">Twitter / X</a></li>
+                        <li><a href="#">Discord 社区</a></li>
+                        <li><a href="#">YouTube 频道</a></li>
+                        <li><a href="#">Steam 社区</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Planetside 2 Fan Site. All Rights Reserved. 本站为粉丝制作，非官方网站。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                  </html>
