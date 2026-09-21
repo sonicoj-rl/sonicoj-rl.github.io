@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>狩猎游戏-沉浸式生存冒险与攻略指南</title>
+    <meta name="description" content="本站提供全面的狩猎游戏资讯、深度攻略、怪物图鉴解析及玩家社区交流。探索从生存建造到高难度BOSS战的各类狩猎体验，助你成为顶级猎手。">
+    <meta name="keywords" content="狩猎游戏,生存游戏,怪物猎人,开放世界,游戏攻略,BOSS攻略,生存指南">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --max-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .hero-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 40px var(--spacing-unit);
+            flex: 1;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* Featured Section */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: normal;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 24px;
+            transition: transform 0.2s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .game-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .game-content {
+            padding: 20px;
+        }
+
+        .game-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            color: var(--text-secondary);
+        }
+
+        .game-title {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .game-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .game-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 24px;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            padding-left: 10px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: #eee;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            margin-right: 12px;
+            font-weight: bold;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: #ff4757; color: white; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #ffa502; color: white; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #2ed573; color: white; }
+
+        .rank-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .rank-info span {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* Guide Grid */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .guide-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+        }
+
+        .guide-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .guide-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a2a3a;
+            color: #ccc;
+            padding: 40px 20px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span>Hunter</span>Guide
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">游戏库</a></li>
+                    <li><a href="#">攻略中心</a></li>
+                    <li><a href="#">社区论坛</a></li>
+                    <li><a href="#">装备图鉴</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>征服荒野，成为顶级猎手</h1>
+            <p>无论你是喜欢硬核生存建造、高难度BOSS挑战，还是沉浸式开放世界探索，这里都有你需要的顶级狩猎游戏推荐与实战技巧。</p>
+            <a href="#games" class="hero-btn">开始狩猎之旅</a>
+        </section>
+
+        <div class="container" id="games">
+            <!-- Left Column: Game List -->
+            <section class="main-content">
+                <div class="section-title">
+                    <h2>热门狩猎游戏推荐</h2>
+                    <a href="#">查看全部 &rarr;</a>
+                </div>
+
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/hunter1/800/400" alt="怪物猎人：荒野概念图" class="game-img">
+                    <div class="game-content">
+                        <div class="game-tags">
+                            <span class="tag">动作RPG</span>
+                            <span class="tag">多人联机</span>
+                            <span class="tag">高难度</span>
+                        </div>
+                        <h3 class="game-title">怪物猎人：荒野</h3>
+                        <p class="game-desc">卡普空力作，带来前所未有的狩猎体验。全新的生态系统、流畅的动作系统和更加壮丽的开放世界，让你与伙伴们共同挑战传说中的古龙。包含详细的武器流派分析与怪物弱点攻略。</p>
+                        <div class="game-meta">
+                            <span>发布时间: 2024年</span>
+                            <span>热度: 98%</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/survival2/800/400" alt="方舟：生存进化" class="game-img">
+                    <div class="game-content">
+                        <div class="game-tags">
+                            <span class="tag">生存建造</span>
+                            <span class="tag">开放世界</span>
+                            <span class="tag">科幻</span>
+                        </div>
+                        <h3 class="game-title">方舟：生存进化</h3>
+                        <p class="game-desc">在这个充满恐龙的岛屿上，你必须收集资源、建造庇护所，并驯服强大的生物。本站提供恐龙驯服时间表、基地建设蓝图以及PvP竞技场战术解析。</p>
+                        <div class="game-meta">
+                            <span>平台: PC / PS5 / Xbox</span>
+                            <span>热度: 92%</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/wildstar/800/400" alt="荒野大镖客：救赎2" class="game-img">
+                    <div class="game-content">
+                        <div class="game-tags">
+                            <span class="tag">西部题材</span>
+                            <span class="tag">叙事冒险</span>
+                            <span class="tag">写实风格</span>
+                        </div>
+                        <h3 class="game-title">荒野大镖客：救赎2</h3>
+                        <p class="game-desc">虽然侧重于故事，但其对西部荒野的细致描绘和狩猎机制令人叹为观止。了解如何追踪野牛、鹿等动物，以及如何制作最顶级的护甲和武器。</p>
+                        <div class="game-meta">
+                            <span>发布时间: 2018年</span>
+                            <span>热度: 95%</span>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="section-title" style="margin-top: 40px;">
+                    <h2>新手生存与攻略指南</h2>
+                </div>
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <h3>⏱️ 生存时间线规划</h3>
+                        <p>从第一晚的火堆搭建，到建立防御工事，详细解析不同阶段的生存策略。</p>
+                    </div>
+                    <div class="guide-card">
+                        <h3>⚔️ 武器选择建议</h3>
+                        <p>根据你的游戏风格，选择最适合的武器类型，避免初期装备浪费。</p>
+                    </div>
+                    <div class="guide-card">
+                        <h3>🧬 怪物弱点分析</h3>
+                        <p>图文并茂展示各类怪物的头部、尾部、翅膀弱点，提升狩猎效率。</p>
+                    </div>
+                    <div class="guide-card">
+                        <h3>🛡️ 防御与护甲搭配</h3>
+                        <p>如何通过镶嵌宝石和升级装备，构建坚不可摧的防御体系。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">本周热门榜单</h3>
+                    <ul class="rank-list">
+                        <li>
+                            <div class="rank-num">1</div>
+                            <div class="rank-info">
+                                <h4>怪物猎人：世界</h4>
+                                <span>卡普空经典之作</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rank-num">2</div>
+                            <div class="rank-info">
+                                <h4>泰拉瑞亚</h4>
+                                <span>2D沙盒冒险</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rank-num">3</div>
+                            <div class="rank-info">
+                                <h4>地平线：零之曙光</h4>
+                                <span>机器人狩猎</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rank-num">4</div>
+                            <div class="rank-info">
+                                <h4>塞尔达传说：旷野之息</h4>
+                                <span>自由探索</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rank-num">5</div>
+                            <div class="rank-info">
+                                <h4>暗黑破坏神 IV</h4>
+                                <span>动作角色扮演</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">常见问题 (FAQ)</h3>
+                    <div style="font-size: 0.9rem;">
+                        <p style="margin-bottom: 10px;"><strong>Q: 狩猎游戏需要联网吗？</strong></p>
+                        <p style="margin-bottom: 15px; color: #666;">大多数现代狩猎游戏支持单机游玩，但联机模式能提供更好的体验和稀有资源掉落率。</p>
+                        
+                        <p style="margin-bottom: 10px;"><strong>Q: 如何快速提升等级？</strong></p>
+                        <p style="margin-bottom: 15px; color: #666;">专注于完成主线任务，并利用双倍经验时段进行狩猎，效率最高。</p>
+                        
+                        <p style="margin-bottom: 10px;"><strong>Q: 新手推荐哪款游戏？</strong></p>
+                        <p style="color: #666;">如果是动作硬核党推荐《怪物猎人：世界》，喜欢自由探索推荐《塞尔达传说》系列。</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>HunterGuide 狩猎指南</h4>
+                <p style="font-size: 0.9rem; line-height: 1.8;">致力于为全球玩家提供最专业、最及时的狩猎游戏资讯与攻略支持。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">投稿指南</a></li>
+                    <li><a href="#">广告合作</a></li>
+                    <li><a href="#">免责声明</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>游戏分类</h4>
+                <ul>
+                    <li><a href="#">动作射击</a></li>
+                    <li><a href="#">角色扮演</a></li>
+                    <li><a href="#">沙盒生存</a></li>
+                    <li><a href="#">策略模拟</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 HunterGuide 狩猎指南. 保留所有权利. 本站内容仅供学习交流使用.
+        </div>
+    </footer>
+
+</body>
+</html>
