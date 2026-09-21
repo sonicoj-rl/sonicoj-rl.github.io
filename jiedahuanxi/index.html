@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="皆大欢喜之溏心风暴 - TVB经典情景喜剧回顾与深度解析。收录剧集介绍、经典台词、角色分析及幕后花絮，重温港剧黄金时代的温馨与欢笑。">
+    <meta name="keywords" content="皆大欢喜之溏心风暴, TVB剧集, 经典港剧, 情景喜剧, 梁家辉, 林峯, 高海宁">
+    <title>皆大欢喜之溏心风暴 - TVB经典港剧回顾与深度解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d35400;
+            --secondary-color: #f39c12;
+            --bg-color: #f9f7f2;
+            --text-color: #333;
+            --light-text: #666;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing: 20px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(211, 84, 0, 0.9), rgba(243, 156, 18, 0.8)), 
+                        url('https://picsum.photos/seed/tvbcake/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #a04000;
+            transform: translateY(-2px);
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 40px var(--spacing);
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--text-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .more-link {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        /* Cast Section */
+        .cast-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .cast-item {
+            text-align: center;
+            width: 120px;
+        }
+
+        .cast-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .cast-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #2c3e50;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .quote-author {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* Info List */
+        .info-list {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            width: 120px;
+            font-weight: 600;
+            color: var(--text-color);
+            flex-shrink: 0;
+        }
+
+        .info-value {
+            color: var(--light-text);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #bdc3c7;
+        }
+
+        .footer-col a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header-inner {
+                padding: 0 15px;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .info-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span>皆大欢喜</span>之溏心风暴
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#overview" class="active">剧集概览</a></li>
+                    <li><a href="#cast">主要演员</a></li>
+                    <li><a href="#quotes">经典台词</a></li>
+                    <li><a href="#analysis">幕后解析</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>皆大欢喜之溏心风暴</h1>
+            <p>重温TVB经典情景喜剧，感受港式家庭的温情与冲突，品味黄金时代的港剧魅力。</p>
+            <a href="#overview" class="btn">开始回顾</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- 剧集概览 -->
+        <section id="overview">
+            <div class="section-header">
+                <h2 class="section-title">剧集概览</h2>
+                <a href="#" class="more-link">查看更多 &rarr;</a>
+            </div>
+            
+            <div class="grid-3">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/tvbcake1/400/250.jpg" alt="电视剧封面" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">TVB剧集</span>
+                        <h3 class="card-title">皆大欢喜之溏心风暴</h3>
+                        <p class="card-desc">由楼南光、林峯、高海宁领衔主演，讲述一个复杂的家庭关系网，充满了误会、和解与爱。</p>
+                        <div class="card-meta">
+                            <span>首播年份：2007</span>
+                            <span>类型：家庭 / 剧情 / 喜剧</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/tvbcake2/400/250.jpg" alt="电视剧剧照" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">剧情看点</span>
+                        <h3 class="card-title">港式家庭的缩影</h3>
+                        <p class="card-desc">剧中展现了典型的香港中产家庭与草根家庭的碰撞，探讨了代沟、婚姻危机与亲情救赎。</p>
+                        <div class="card-meta">
+                            <span>集数：20集</span>
+                            <span>导演：王晶、刘家豪</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/tvbcake3/400/250.jpg" alt="电视剧剧照" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">获奖情况</span>
+                        <h3 class="card-title">收视口碑双丰收</h3>
+                        <p class="card-desc">该剧播出期间收视率居高不下，深受观众喜爱，获得了当年多项电视大奖的提名与肯定。</p>
+                        <div class="card-meta">
+                            <span>监制：王晶</span>
+                            <span>状态：已完结</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 主要演员 -->
+        <section id="cast" style="margin-top: 60px;">
+            <div class="section-header">
+                <h2 class="section-title">主要演员</h2>
+            </div>
+            <div class="cast-list">
+                <div class="cast-item">
+                    <img src="https://picsum.photos/seed/actor1/200/200.jpg" alt="林峯" class="cast-avatar">
+                    <div class="cast-name">林峯</div>
+                    <div style="font-size:0.8rem; color:#666;">饰演：常在心</div>
+                </div>
+                <div class="cast-item">
+                    <img src="https://picsum.photos/seed/actor2/200/200.jpg" alt="高海宁" class="cast-avatar">
+                    <div class="cast-name">高海宁</div>
+                    <div style="font-size:0.8rem; color:#666;">饰演：林汀汀</div>
+                </div>
+                <div class="cast-item">
+                    <img src="https://picsum.photos/seed/actor3/200/200.jpg" alt="楼南光" class="cast-avatar">
+                    <div class="cast-name">楼南光</div>
+                    <div style="font-size:0.8rem; color:#666;">饰演：常在秋</div>
+                </div>
+                <div class="cast-item">
+                    <img src="https://picsum.photos/seed/actor4/200/200.jpg" alt="黄宗泽" class="cast-avatar">
+                    <div class="cast-name">黄宗泽</div>
+                    <div style="font-size:0.8rem; color:#666;">饰演：常在杰</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 经典台词 -->
+        <section id="quotes" style="margin-top: 60px;">
+            <div class="quote-section">
+                <p class="quote-text">“做人最紧要就是开心！”</p>
+                <p class="quote-author">—— 常在秋（楼南光 饰）</p>
+                <br>
+                <p class="quote-text">“这里不是我的家，我的家在……？”</p>
+                <p class="quote-author">—— 经典家庭关系台词</p>
+            </div>
+        </section>
+
+        <!-- 剧集信息与幕后 -->
+        <section id="analysis" style="margin-top: 60px;">
+            <div class="section-header">
+                <h2 class="section-title">幕后与信息</h2>
+            </div>
+            
+            <div class="grid-3">
+                <div class="info-list">
+                    <h3 style="margin-bottom:20px; color:var(--primary-color);">剧集档案</h3>
+                    <div class="info-item">
+                        <span class="info-label">编剧：</span>
+                        <span class="info-value">张华标、黄育德</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">类型：</span>
+                        <span class="info-value">家庭伦理 / 喜剧 / 情感</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">集数：</span>
+                        <span class="info-value">共20集</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">首播：</span>
+                        <span class="info-value">2007年</span>
+                    </div>
+                </div>
+
+                <div class="info-list" style="grid-column: span 2;">
+                    <h3 style="margin-bottom:20px; color:var(--primary-color);">剧情简介</h3>
+                    <p style="margin-bottom:15px; color:var(--light-text);">
+                        故事围绕一个经营“福顺”饼家的家庭展开。父亲常在秋（楼南光饰）是个典型的“妻管严”，虽然疼爱子女，但在家庭中缺乏话语权。随着剧情推进，复杂的家庭关系逐渐浮出水面，包括子女们的婚恋问题、长辈的健康问题以及商业竞争的阴影。
+                    </p>
+                    <p style="margin-bottom:15px; color:var(--light-text);">
+                        剧集并没有停留在狗血的家庭伦理剧层面，而是通过幽默的方式展现了香港中下层家庭的生活百态。角色之间虽然有矛盾，但最终都回归到亲情与包容，体现了“皆大欢喜”的主题。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>皆大欢喜之溏心风暴</h3>
+                <p style="color:#bdc3c7; font-size:0.9rem;">
+                    致敬经典港剧，重温TVB黄金时代的温馨回忆。本站仅用于影视资料整理与分享。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>快速导航</h3>
+                <ul>
+                    <li><a href="#overview">剧集介绍</a></li>
+                    <li><a href="#cast">演员表</a></li>
+                    <li><a href="#quotes">经典语录</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>相关剧集</h3>
+                <ul>
+                    <li><a href="#">皆大欢喜</a></li>
+                    <li><a href="#">溏心风暴之家好月圆</a></li>
+                    <li><a href="#">幸福像花儿一样</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 港剧回顾网. All Rights Reserved. 此页面为静态展示页，不隶属于TVB官方。
+        </div>
+    </footer>
+
+</body>
+</html>
