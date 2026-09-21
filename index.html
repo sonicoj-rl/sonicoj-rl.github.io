@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="逃学大乱斗秘籍大全，提供详细的逃学大乱斗角色攻略、技能连招技巧、隐藏要素解锁方法及新手入门指南。">
+    <meta name="keywords" content="逃学大乱斗秘籍, 逃学大乱斗攻略, 逃学大乱斗角色, 逃学大乱斗技巧">
+    <title>逃学大乱斗秘籍-角色攻略、连招技巧与隐藏要素全解</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4757;
+            --secondary-color: #2f3542;
+            --accent-color: #ffa502;
+            --bg-color: #f1f2f6;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-light: #747d8c;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: var(--spacing-md) 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            color: #dfe4ea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #ff6b81 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .search-box {
+            display: inline-flex;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            outline: none;
+            width: 300px;
+        }
+
+        .search-box button {
+            background: #fff;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary-color);
+            transition: transform 0.2s;
+        }
+
+        .search-box button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Main Content */
+        main {
+            padding-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-lg);
+            border-left: 5px solid var(--primary-color);
+            padding-left: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        /* Character Grid */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .char-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .char-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .char-img {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            object-fit: cover;
+        }
+
+        .char-info {
+            padding: var(--spacing-md);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .char-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .char-role {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            background: rgba(255, 71, 87, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+            width: fit-content;
+        }
+
+        .char-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Strategy Section */
+        .strategy-section {
+            background: var(--card-bg);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .strategy-list {
+            list-style: none;
+        }
+
+        .strategy-item {
+            display: flex;
+            align-items: flex-start;
+            padding: var(--spacing-md) 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .strategy-item:last-child {
+            border-bottom: none;
+        }
+
+        .strategy-icon {
+            font-size: 1.5rem;
+            margin-right: var(--spacing-md);
+            color: var(--accent-color);
+        }
+
+        .strategy-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .strategy-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--card-bg);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 10px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none;
+            border-left: 3px solid var(--primary-color);
+            margin-left: 10px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            background: #fff0f0;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #dfe4ea;
+            padding: 40px 0;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: #dfe4ea;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: var(--spacing-md);
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <a href="#" class="logo">📚 <span>逃学大乱斗</span>秘籍</a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">攻略首页</a></li>
+                <li><a href="#characters">角色图鉴</a></li>
+                <li><a href="#strategy">连招技巧</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>掌握战局，成为校园王者</h1>
+        <p>这里是逃学大乱斗最全面的秘籍库，包含所有角色的详细攻略、连招教学以及隐藏要素解析。</p>
+        <div class="search-box">
+            <input type="text" placeholder="搜索角色或技巧...">
+            <button>搜索</button>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+    
+    <!-- 角色攻略 -->
+    <section id="characters">
+        <div class="section-title">
+            <h2>热门角色秘籍</h2>
+            <a href="#">查看全部 &rarr;</a>
+        </div>
+        <div class="char-grid">
+            <!-- 角色卡片 1 -->
+            <article class="char-card">
+                <img src="https://picsum.photos/seed/char1/400/300" alt="黑崎一护" class="char-img">
+                <div class="char-info">
+                    <h3 class="char-name">黑崎一护</h3>
+                    <span class="char-role">近战/斩击</span>
+                    <p class="char-desc">拥有极高攻击力和破甲能力，适合正面硬刚。秘籍核心在于利用【月牙天冲】的范围伤害压制对手走位。</p>
+                    <a href="#" class="btn">查看详细攻略</a>
+                </div>
+            </article>
+
+            <!-- 角色卡片 2 -->
+            <article class="char-card">
+                <img src="https://picsum.photos/seed/char2/400/300" alt="雏田" class="char-img">
+                <div class="char-info">
+                    <h3 class="char-name">日向雏田</h3>
+                    <span class="char-role">辅助/控制</span>
+                    <p class="char-desc">柔拳宗师，擅长打断对手技能。秘籍重点在于【回天】的防御反击时机，以及【八卦空掌】的远程压制。</p>
+                    <a href="#" class="btn">查看详细攻略</a>
+                </div>
+            </article>
+
+            <!-- 角色卡片 3 -->
+            <article class="char-card">
+                <img src="https://picsum.photos/seed/char3/400/300" alt="李洛克" class="char-img">
+                <div class="char-info">
+                    <h3 class="char-name">洛克李</h3>
+                    <span class="char-role">爆发/速度</span>
+                    <p class="char-desc">全速模式下的爆发力无人能敌。秘籍关键在于【木叶旋风】的连击衔接，以及后撤步躲避致命一击。</p>
+                    <a href="#" class="btn">查看详细攻略</a>
+                </div>
+            </article>
+
+            <!-- 角色卡片 4 -->
+            <article class="char-card">
+                <img src="https://picsum.photos/seed/char4/400/300" alt="鸣人" class="char-img">
+                <div class="char-info">
+                    <h3 class="char-name">漩涡鸣人</h3>
+                    <span class="char-role">远程/连招</span>
+                    <p class="char-desc">多重影分身术是核心战术。秘籍在于分身与本体切换的时机，利用【螺旋丸】的持续伤害磨血。</p>
+                    <a href="#" class="btn">查看详细攻略</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 战术技巧 -->
+    <section id="strategy">
+        <div class="section-title">
+            <h2>实战战术与技巧</h2>
+        </div>
+        <div class="strategy-section">
+            <ul class="strategy-list">
+                <li class="strategy-item">
+                    <div class="strategy-icon">⚔️</div>
+                    <div class="strategy-content">
+                        <h3>如何应对霸体技能？</h3>
+                        <p>当对手开启霸体（如【须佐能乎】状态）时，不要强行硬拼。应利用翻滚取消后摇，拉开距离，寻找破绽进行反击。</p>
+                    </div>
+                </li>
+                <li class="strategy-item">
+                    <div class="strategy-icon">🛡️</div>
+                    <div class="strategy-content">
+                        <h3>防御反击机制详解</h3>
+                        <p>在敌人攻击即将命中的瞬间按下防御键，会触发完美防御，不仅能完全抵挡伤害，还能造成硬直，是逆风翻盘的关键。</p>
+                    </div>
+                </li>
+                <li class="strategy-item">
+                    <div class="strategy-icon">⚡</div>
+                    <div class="strategy-content">
+                        <h3>能量条管理策略</h3>
+                        <p>合理使用【奥义】技能。在对手血量低于30%且处于浮空状态时释放奥义，可以触发“终结技”，造成巨额伤害。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 常见问题 FAQ -->
+    <section id="faq">
+        <div class="section-title">
+            <h2>新手常见问题 (FAQ)</h2>
+        </div>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">如何解锁隐藏角色？</div>
+                <div class="faq-answer">完成特定模式下的所有挑战，或者在“决斗场”达到一定段位后，即可在角色选择界面解锁隐藏角色。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">游戏支持哪些操作平台？</div>
+                <div class="faq-answer">目前支持PC端（Steam/WeGame）及移动端（iOS/Android），数据互通。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">秘籍代码在哪里输入？</div>
+                <div class="faq-answer">本游戏采用“秘籍书”道具机制。在主菜单选择“道具” -> “秘籍书” -> “使用”，即可在游戏中临时生效。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何提升连招流畅度？</div>
+                <div class="faq-answer">建议在设置中调整“连招修正”选项。熟练掌握角色的普攻第三下、第五下是否可以取消后摇，是连招的基础。</div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 逃学大乱斗秘籍大全. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">关于本站</a>
+            <a href="#">免责声明</a>
+            <a href="#">联系合作</a>
+            <a href="#">用户协议</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.8rem; color: #7f8fa6;">
+            本站为玩家攻略分享平台，所有游戏版权归其原作者所有。
+        </p>
+    </div>
+</footer>
+
+<script>
+    // 简单的 FAQ 切换交互
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
+
+    // 简单的搜索框交互（模拟）
+    const searchBtn = document.querySelector('.search-box button');
+    const searchInput = document.querySelector('.search-box input');
+    
+    searchBtn.addEventListener('click', () => {
+        const query = searchInput.value.trim();
+        if(query) {
+            alert('正在搜索关于 "' + query + '" 的秘籍与攻略...');
+            // 实际项目中这里会跳转到搜索结果页
+        }
+    });
+
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            searchBtn.click();
+        }
+    });
+</script>
+
+</body>
+</html>
