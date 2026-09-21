@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩世忠和岳飞 - 历史人物生平、抗金事迹与英雄评价</title>
+    <meta name="description" content="韩世忠与岳飞是南宋时期两位杰出的抗金名将。本站详细介绍韩世忠、岳飞的生平经历、黄天荡之战、朱仙镇之战等经典战役，以及岳飞冤案与韩世忠直言进谏的历史评价。">
+    <meta name="keywords" content="韩世忠, 岳飞, 南宋抗金名将, 黄天荡之战, 靖康之变, 岳飞冤案">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 深红，象征热血与历史 */
+            --secondary-color: #2c3e50; /* 深蓝灰，象征沉稳 */
+            --accent-color: #d4af37; /* 金色，象征勋章与荣耀 */
+            --bg-color: #f9f7f2; /* 米色纸张质感 */
+            --text-color: #333;
+            --light-text: #666;
+            --border-color: #e0e0e0;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/songdynasty/1920/600') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn:hover {
+            background-color: #a00000;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #fff;
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: #fff;
+            color: var(--primary-color);
+        }
+
+        /* 介绍区域 */
+        .intro-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        .section-title p {
+            color: var(--light-text);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .intro-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .intro-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .intro-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            filter: sepia(0.3);
+        }
+
+        /* 合作与战役 */
+        .collaboration-section {
+            padding: 80px 0;
+            background-color: var(--bg-color);
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--border-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background-color: #fff;
+            border: 4px solid var(--accent-color);
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #fff;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #fff;
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #fff;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #fff transparent transparent;
+        }
+
+        .right::after {
+            left: -8px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: #fff;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: var(--card-shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .timeline-content h4 {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .timeline-content .role {
+            display: inline-block;
+            font-size: 0.85rem;
+            background-color: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .timeline-content p {
+            font-size: 0.95rem;
+            color: var(--light-text);
+        }
+
+        /* 名将卡片 */
+        .generals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .general-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s;
+            border-top: 3px solid transparent;
+        }
+
+        .general-card:hover {
+            transform: translateY(-5px);
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .card-body .rank {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card-body p {
+            font-size: 0.95rem;
+            color: var(--light-text);
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            background-color: #f4f4f4;
+            color: #666;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        /* 历史评价 */
+        .evaluation-section {
+            padding: 80px 0;
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        .evaluation-section .section-title h2 {
+            color: #fff;
+        }
+
+        .quote-box {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .quote-box blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .quote-box cite {
+            font-style: normal;
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-question.active::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            padding: 0 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--light-text);
+        }
+
+        .faq-answer p {
+            padding-bottom: 15px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1a1a1a;
+            color: #999;
+            padding: 40px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+
+        /* 响应式设计 */
+        @media screen and (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-container::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .left::before, .right::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            .right {
+                left: 0%;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>宋史风云</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#overview">人物生平</a></li>
+                    <li><a href="#battles">著名战役</a></li>
+                    <li><a href="#evaluation">历史评价</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>韩世忠与岳飞</h1>
+            <p>南宋抗金双璧，铁血丹心铸就民族脊梁</p>
+            <div class="hero-btns">
+                <a href="#overview" class="btn">探索生平</a>
+                <a href="#battles" class="btn btn-outline">阅读战役</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 概述介绍 -->
+    <section id="overview" class="intro-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>南宋抗金双璧</h2>
+                <p>了解韩世忠与岳飞在南宋历史上的重要地位与贡献</p>
+            </div>
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <h3>时代背景</h3>
+                    <p>北宋末年，金兵南下，靖康之变导致北宋灭亡。南宋建立后，面对金国的军事威胁，朝廷涌现出一批英勇善战的将领。韩世忠与岳飞便是其中最为杰出的代表，他们以卓越的军事才能和坚定的爱国情怀，撑起了南宋半壁江山。</p>
+                    
+                    <h3>人物关系</h3>
+                    <p>韩世忠与岳飞同为“中兴四将”之一。两人虽为同事，但在政治立场上既有合作也有分歧。在抗金大业上，他们同仇敌忾；但在对待朝廷权臣（如秦桧）的策略上，韩世忠相对更为直率，而岳飞则因过于刚正而遭遇不幸。</p>
+                    
+                    <h3>历史意义</h3>
+                    <p>他们的存在不仅是军事上的胜利，更是精神上的丰碑。韩世忠镇守京口（今镇江），多次击败金军主力；岳飞挥师北伐，一度逼近开封。他们的故事至今仍被传颂，是中华民族不屈不挠精神的象征。</p>
+                </div>
+                <div class="intro-img">
+                    <img src="https://picsum.photos/seed/soldier/600/400" alt="南宋抗金名将画像" width="600" height="400">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作与战役时间轴 -->
+    <section id="battles" class="collaboration-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>抗金烽火录</h2>
+                <p>记录韩世忠与岳飞在南宋军事史上的关键节点</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="role">韩世忠</span>
+                        <h4>黄天荡之战</h4>
+                        <p>建炎四年（1130年），金军渡江后遭遇韩世忠率领的八千水军阻击。韩世忠在黄天荡截断金军归路，双方在长江水域激战四十八日，虽最终因金军采纳建策突围，但此战沉重打击了金军南下的气焰，韩世忠被誉为“万人敌”。</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="role">岳飞</span>
+                        <h4>收复六郡</h4>
+                        <p>绍兴四年（1134年），岳飞率军北伐，在短短数月内收复襄阳六郡，打通了通往中原的战略通道。这是南宋建立以来取得的重大军事胜利，极大地鼓舞了士气，岳飞也因此晋升为清远军节度使。</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="role">韩世忠</span>
+                        <h4>平定苗刘兵变</h4>
+                        <p>建炎三年（1129年），苗傅、刘正彦发动兵变，逼迫宋高宗退位。韩世忠闻讯后，率军急行军赶回临安，平定叛乱，拥立宋高宗复位，为稳定南宋政权立下汗马功劳。</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="role">岳飞</span>
+                        <h4>朱仙镇大捷</h4>
+                        <p>绍兴十年（1140年），岳飞在朱仙镇（今河南开封附近）大败金兀术（完颜宗弼）的精锐部队。这是岳飞北伐中离收复汴京（开封）最近的时刻，体现了岳家军“冻死不拆屋，饿死不掳掠”的严明军纪。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 人物卡片 -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>名将风采</h2>
+            </div>
+            <div class="generals-grid">
+                <!-- 韩世忠卡片 -->
+                <article class="general-card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/han/400/300" alt="韩世忠画像">
+                    </div>
+                    <div class="card-body">
+                        <h3>韩世忠</h3>
+                        <span class="rank">南宋抗金名将 · 中兴四将</span>
+                        <p>字良臣，延安人。面如重枣，性格豪爽。早年随宋徽宗镇压方腊起义，后率部抗击金军，以智勇双全著称。他在黄天荡之战中表现出的指挥艺术，成为军事史上的经典案例。</p>
+                        <div class="card-tags">
+                            <span class="tag">忠勇</span>
+                            <span class="tag">水战专家</span>
+                            <span class="tag">刚正不阿</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 岳飞卡片 -->
+                <article class="general-card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/yue/400/300" alt="岳飞画像">
+                    </div>
+                    <div class="card-body">
+                        <h3>岳飞</h3>
+                        <span class="rank">南宋抗金名将 · 中兴四将</span>
+                        <p>字鹏举，河北汤阴人。出身农家，少负气节。治军严明，所部“岳家军”号称“撼山易，撼岳家军难”。他主张“直捣黄龙”，是南宋最坚定的主战派将领。</p>
+                        <div class="card-tags">
+                            <span class="tag">精忠报国</span>
+                            <span class="tag">治军严明</span>
+                            <span class="tag">民族英雄</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 历史评价 -->
+    <section id="evaluation" class="evaluation-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>后世评价</h2>
+            </div>
+            <div class="quote-box">
+                <blockquote>
+                    “岳飞精忠报国，韩世忠赤胆忠心，二人皆为社稷之臣。”
+                </blockquote>
+                <cite>—— 历史学家评价</cite>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">1127</span>
+                    <span class="stat-label">北宋灭亡年份</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1142</span>
+                    <span class="stat-label">岳飞遇害年份</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1130</span>
+                    <span class="stat-label">黄天荡之战</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1134</span>
+                    <span class="stat-label">岳飞收复六郡</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">韩世忠和岳飞的关系如何？</div>
+                    <div class="faq-answer">
+                        <p>两人同为南宋“中兴四将”，在军事上属于同一阵营，共同抗金。韩世忠镇守东南，岳飞镇守湖北、河南。两人既有合作，也曾在某些政治策略上有不同看法，但总体上保持着同事和战友的情谊。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">黄天荡之战的结局如何？</div>
+                    <div class="faq-answer">
+                        <p>黄天荡之战中，韩世忠利用地形优势封锁江面，金军无法渡江。虽然韩世忠兵力处于劣势，但他成功阻击了金军主力，使其无法与在江南的其他金军会合，并最终迫使金军突围，此战是南宋初期的重要胜利。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">岳飞之死与秦桧有什么关系？</div>
+                    <div class="faq-answer">
+                        <p>岳飞之死是南宋政治斗争的悲剧。宋高宗赵构出于对金国议和的考虑，以及对武将拥兵自重的担忧，默许了秦桧等人以“莫须有”的罪名陷害岳飞。韩世忠曾当面质问秦桧“莫须有三字何以服天下”，但也无力回天。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">韩世忠晚年过着怎样的生活？</div>
+                    <div class="faq-answer">
+                        <p>在岳飞遇害后，韩世忠深感朝廷政治的黑暗与险恶，加上身体抱恙，他选择了激流勇退。他卸去兵权，闭门谢客，不再过问朝政，潜心研究佛学，最终在绍兴二十一年（1151年）病逝，享年六十三岁。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p>致力于传播南宋历史文化，介绍韩世忠、岳飞等历史人物的生平事迹与精神遗产，为历史爱好者提供资料参考。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#overview">人物生平</a></li>
+                        <li><a href="#battles">著名战役</a></li>
+                        <li><a href="#evaluation">历史评价</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">宋史研究</a></li>
+                        <li><a href="#">岳飞研究</a></li>
+                        <li><a href="#">南宋军事</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 宋史风云网 - 专注南宋历史与人物研究</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ折叠逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    // 切换当前激活状态
+                    this.classList.toggle('active');
+                    
+                    // 获取对应的答案区域
+                    const answer = this.nextElementSibling;
+                    
+                    if (this.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    } else {
+                        answer.style.maxHeight = 0;
+                    }
+                });
+            });
+
+            // 简单的平滑滚动效果
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 70;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
